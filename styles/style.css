@@ -166,7 +166,6 @@
 }
 
 .content__card-text {
-  font-variation-settings: var(--font-weight-main-text);
   padding: 25px;
   display: flex;
   flex-flow: column;
