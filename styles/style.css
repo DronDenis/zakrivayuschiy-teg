@@ -19,7 +19,7 @@
 }
 
 .page {
-  font-variation-settings: var(--font-weight-main-text);
+  font-variation-settings: wght var(--font-weight-main-text);
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--font-main), Arial, sans-serif;
@@ -144,7 +144,7 @@
 }
 
 .content__title {
-  font-variation-settings: var(--font-weight-main);
+  font-variation-settings: wght var(--font-weight-main);
   padding: 5px 10px 5px 10px;
   font-size: 18px;
 }
