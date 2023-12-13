@@ -8,6 +8,7 @@
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
+
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
@@ -18,10 +19,10 @@
 }
 
 .page {
+  font-variation-settings: var(--font-weight-main-text);
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--font-main), Arial, sans-serif;
-  font-variation-settings: var(--font-weight-main-text);
   background-color: var(--bg-color);
   color: var(--accent-color);
   background-image: var(--bg-image);
@@ -143,9 +144,9 @@
 }
 
 .content__title {
+  font-variation-settings: var(--font-weight-main);
   padding: 5px 10px 5px 10px;
   font-size: 18px;
-  font-variation-settings: var(--font-weight-main);
 }
 
 .content__image-card {
@@ -165,12 +166,12 @@
 }
 
 .content__card-text {
+  font-variation-settings: var(--font-weight-main-text);
   padding: 25px;
   display: flex;
   flex-flow: column;
   gap: 27px;
   font-size: 18px;
-  font-variation-settings: var(--font-weight-main-text);
   line-height: 21px;
   margin-block: 0;
 }
@@ -207,8 +208,6 @@
   min-inline-size: 130px;
   min-block-size: 38px;
   background-color: transparent;
-  border: none;
-  padding: 9px 17px 5px 17px;
   border: 2px solid currentColor;
   inline-size: min-content;
   position: relative;
@@ -263,7 +262,7 @@ button.button-hov:hover {
   inline-size: min-content;
   display: flex;
   flex-flow: column;
-  margin: 50px auto;
+  margin: 50px auto 100px auto;
   align-items: center;
 }
 
