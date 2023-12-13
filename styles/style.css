@@ -50,7 +50,7 @@
 
 .background__content {
   background-color: var(--bg-color);
-  border: 2px solid currentColor;
+  border: 2px solid var(--accent-color);
 }
 
 .header-logo {
@@ -82,6 +82,7 @@
   text-transform: uppercase;
   padding: 0;
   position: relative;
+  transition: opasity 0.3s ease;
 }
 
 .theme-menu__button::after {
@@ -91,25 +92,21 @@
   height: 2px;
   bottom: -1px;
   background-color: currentColor;
-  transition: width 0.3s;
+  transition: width 0.3s ease;
   opacity: 0.6;
   position: absolute;
 }
 
 .theme-menu__button:focus-visible::after {
   width: 100%;
-  transition-timing-function: ease;
 }
 
 .theme-menu__button:focus-visible {
   opacity: 0.6;
-  transition: opacity 0.3s;
-  transition-timing-function: ease;
 }
 
 .theme-menu__button:hover::after {
   width: 100%;
-  transition-timing-function: ease;
   cursor: pointer;
 }
 
@@ -120,8 +117,6 @@
 
 .theme-menu__button:hover {
   opacity: 0.6;
-  transition: opacity 0.3s;
-  transition-timing-function: ease;
   cursor: pointer;
 }
 
@@ -129,6 +124,7 @@
   content: '▶';
   position: absolute;
   left: -20px;
+  top: 0;
   animation: pointer 0.5s ease-in-out infinite alternate;
 }
 
@@ -191,11 +187,11 @@
   padding: 0;
   inline-size: 39px;
   block-size: 34px;
+  transition: outline 0.3s ease; 
 }
 
-.svg-button:focus-visible {
+.card__icon-button:focus-visible {
   outline: 2px solid var(--accent-color);
-  outline-offset: 0px;
 }
 
 .sparks {
@@ -207,7 +203,7 @@
   min-inline-size: 130px;
   min-block-size: 38px;
   background-color: transparent;
-  border: 2px solid currentColor;
+  border: 2px solid var(--accent-color);
   inline-size: min-content;
   position: relative;
   display: flex;
@@ -224,17 +220,20 @@
   line-height: 12.6px;
 }
 
+.button-hov {
+  color: var(--accent-color);
+  transition: color 1s ease;
+  transition: box-shadow 0.3s ease;
+  transition: color 1s ease;
+}
+
 .button-hov:focus-visible {
-  box-shadow: 2px 2px 0 0 currentColor;
-  transition-timing-function: ease;
-  transition: box-shadow 0.3s;
+  box-shadow: 2px 2px 0 0 var(--accent-color);
 }
 
 button.button-hov:hover {
   color: var(--bg-color);
   fill: currentColor;
-  transition: color 1s;
-  border-color: var(--accent-color);
 }
 
 .button-hov::after {
@@ -245,27 +244,17 @@ button.button-hov:hover {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateX(-100%);
+  transition: inline-size 0.5s ease-in-out;
+
 }
 
 .button-hov:hover::after {
-  transition-timing-function: ease-in-out;
   cursor: pointer;
   inline-size: 100%;
-  transform: translateX(0);
-  transition: inline-size 0.5s;
-}
-
-
-.footer {
-  inline-size: min-content;
-  display: flex;
-  flex-flow: column;
-  margin: 50px auto 100px auto;
-  align-items: center;
 }
 
 .footer__button {
+  margin: 50px auto 100px auto;
   justify-self: center;
   align-self: center;
   display: flex;
