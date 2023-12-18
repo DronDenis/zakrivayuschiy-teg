@@ -172,7 +172,7 @@
   mix-blend-mode: hard-light;
   position: absolute;
   top: 27px;
-  right: 25px;
+  right: 11px;
 }
 
 @supports((text-stroke: var(--text-stroke)) or (-webkit-text-stroke: var(--text-stroke))) {
@@ -368,6 +368,10 @@
 }
 
 @media (375px < width) {
+  .image__lable {
+    right: 25px;
+  }
+
   .footer__button {
     flex-flow: row;
     gap: 8px;
